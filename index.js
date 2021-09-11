@@ -10,6 +10,10 @@ app.get('/', (req, res) => {
     res.sendFile(__dirname + '/static/index.html');
 });
 
+app.get('/json', (req, res) => {
+    res.sendFile(__dirname + '/static/json.html');
+});
+
 app.use(express.static('public'));
 app.use(cors());
 app.use('/images', express.static(__dirname + '/Images'));
